@@ -1,0 +1,10 @@
+# load testing frameworks
+require 'minitest/autorun'
+require 'minitest/spec'
+require 'webmock/minitest'
+
+# load libraries under test
+require_relative 'initialize'
+
+# run tests
+Dir.glob('./spec/**/*_spec.rb').each { |file| require file }
