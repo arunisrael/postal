@@ -9,7 +9,7 @@ bundle install
 HOW TO RUN
 --------------
 
-Set up these environment variables
+Set up these environment variables using your own API keys + sandbox mail accounts
 ```
 MAILGUN_API_USER
 MAILGUN_API_KEY
@@ -17,6 +17,17 @@ MAILGUN_API_SEND_URI
 MANDRILL_API_SEND_URI
 MANDRILL_API_KEY
 ```
+
+
+Here is an idea of what these should be set to:
+```
+MAILGUN_API_USER=api
+MAILGUN_API_KEY=YOUR+MAILGUN+API+KEY
+MAILGUN_API_SEND_URI=https://api.mailgun.net/v2/YOUR+MAILGUN+SANDBOX.mailgun.org/messages
+MANDRILL_API_SEND_URI=https://mandrillapp.com/api/1.0/messages/send.json
+MANDRILL_API_KEY=YOUR+MANDRILL+API+KEY
+```
+
 Then start the server:
 ```
 ruby app.rb
