@@ -1,8 +1,6 @@
 class Mandrill
   include BaseMailer
 
-  POST_URI = ENV['MANDRILL_API_POST_URI']
-
   def initialize(msg)
     @msg = msg
     @post_options = { 'Content-Type' => 'application/json' }
